@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Sample.Console", "samples\Mediator.Sample.Console\Mediator.Sample.Console.csproj", "{5110D4EF-ADEB-4CD4-8688-1AEF8449CCF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Sample.Api", "samples\Mediator.Sample.Api\Mediator.Sample.Api.csproj", "{0AF4018C-FA02-4A2E-9671-D292ECD2C29B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "src\Mediator\Mediator.csproj", "{C8C4E289-6F66-4198-8723-6F0F68B88390}"
@@ -23,10 +21,6 @@ Global
 		{5110D4EF-ADEB-4CD4-8688-1AEF8449CCF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5110D4EF-ADEB-4CD4-8688-1AEF8449CCF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5110D4EF-ADEB-4CD4-8688-1AEF8449CCF3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0AF4018C-FA02-4A2E-9671-D292ECD2C29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AF4018C-FA02-4A2E-9671-D292ECD2C29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AF4018C-FA02-4A2E-9671-D292ECD2C29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AF4018C-FA02-4A2E-9671-D292ECD2C29B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C8C4E289-6F66-4198-8723-6F0F68B88390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C8C4E289-6F66-4198-8723-6F0F68B88390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8C4E289-6F66-4198-8723-6F0F68B88390}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,7 +35,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5110D4EF-ADEB-4CD4-8688-1AEF8449CCF3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{0AF4018C-FA02-4A2E-9671-D292ECD2C29B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D178DA11-613A-4C35-9FCA-F824148943A0}
