@@ -34,6 +34,6 @@ jobs:
         run: dotnet pack src/Mediator/Mediator.csproj --configuration Release --output ./nupkgs /p:Version=${{ env.VERSION }}
 
       - name: Publish to NuGet
-        run: dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_SECRET_D_MEDIATOR_ABSTRACTIONS }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_SECRET_D_MEDIATOR }} --source https://api.nuget.org/v3/index.json
 
       
