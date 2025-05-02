@@ -6,7 +6,6 @@
     <Nullable>enable</Nullable>
 
     <PackageId>D.Mediator</PackageId>
-    <Version>1.0.0</Version>
     <icon>https://raw.githubusercontent.com/dayaneLima/dotnet-mediator/refs/heads/main/src/Mediator/icon.png</icon>
     <Licence>MIT</Licence>
     <Authors>Dayane Lima</Authors>

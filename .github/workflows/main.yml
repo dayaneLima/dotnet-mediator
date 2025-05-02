@@ -1,29 +1,39 @@
-name: Build and deploy
+name: Publish NuGet Package
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - '*'
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@main
+      - name: Check out code
+        uses: actions/checkout@main
       
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x'
+
+      - name: Get the latest Git tag
+        id: git_tag
+        run: |
+          VERSION=$(git describe --tags --abbrev=0)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+      
+      - name: Restore dependencies
+        run: dotnet restore src/Mediator.Abstractions/Mediator.Abstractions.csproj
 
       - name: Build with dotnet
         run: dotnet build src/Mediator/Mediator.csproj --configuration Release
 
       - name: Create the Package
-        run: dotnet pack src/Mediator/Mediator.csproj --configuration Release
+        run: dotnet pack src/Mediator/Mediator.csproj --configuration Release --output ./nupkgs /p:Version=${{ env.VERSION }}
 
-      - name: Publish
-        run: dotnet nuget push "src/Mediator/bin/Release/*.nupkg" -k ${{ secrets.NUGET_SECRET_D_MEDIATOR }} -s https://api.nuget.org/v3/index.json
+      - name: Publish to NuGet
+        run: dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_SECRET_D_MEDIATOR_ABSTRACTIONS }} --source https://api.nuget.org/v3/index.json
 
       
