@@ -1,3 +1,8 @@
+| Package | Version | Downloads |
+| ------- | ------- | ------- |
+| `Mediator` | [![Nuget](https://img.shields.io/nuget/v/D.Mediator.svg)](https://nuget.org/packages/D.Mediator) | [![Nuget](https://img.shields.io/nuget/dt/D.Mediator.svg)](https://nuget.org/packages/D.Mediator) |
+| `Mediator.Abstractions` | [![Nuget](https://img.shields.io/nuget/v/D.Mediator.Abstractions.svg)](https://nuget.org/packages/D.Mediator.Abstractions) | [![Nuget](https://img.shields.io/nuget/dt/D.Mediator.Abstractions.svg)](https://nuget.org/packages/D.Mediator.Abstractions) |
+
 
 # 🧩 Simple Mediator for .NET
 
