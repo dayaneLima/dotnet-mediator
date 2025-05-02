@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
 
     <PackageId>D.Mediator.Abstractions</PackageId>
-    <Version>1.0.0</Version>
-    <icon></icon>
+    <Version>1.0.1</Version>
+    <icon>https://raw.githubusercontent.com/dayaneLima/dotnet-mediator/refs/heads/main/src/Mediator.Abstractions/icon.png</icon>
     <Licence>MIT</Licence>
     <Authors>Dayane Lima</Authors>
     <Company>Dayane Lima</Company>
