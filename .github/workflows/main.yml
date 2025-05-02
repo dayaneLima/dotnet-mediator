@@ -25,7 +25,7 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_ENV
       
       - name: Restore dependencies
-        run: dotnet restore src/Mediator.Abstractions/Mediator.Abstractions.csproj
+        run: dotnet restore src/Mediator/Mediator.csproj
 
       - name: Build with dotnet
         run: dotnet build src/Mediator/Mediator.csproj --configuration Release
