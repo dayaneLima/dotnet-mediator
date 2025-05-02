@@ -18,12 +18,12 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Build with dotnet
-        run: dotnet build src/Mediator.Abstractions/Mediator.Abstractions.csproj --configuration Release
+        run: dotnet build src/Mediator/Mediator.csproj --configuration Release
 
       - name: Create the Package
-        run: dotnet pack src/Mediator.Abstractions/Mediator.Abstractions.csproj --configuration Release
+        run: dotnet pack src/Mediator/Mediator.csproj --configuration Release
 
       - name: Publish
-        run: dotnet nuget push "src/Mediator.Abstractions/bin/Release/*.nupkg" -k ${{ secrets.NUGET_SECRET_D_MEDIATOR_ABSTRACTIONS }} -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push "src/Mediator/bin/Release/*.nupkg" -k ${{ secrets.NUGET_SECRET_D_MEDIATOR }} -s https://api.nuget.org/v3/index.json
 
       

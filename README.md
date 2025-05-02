@@ -1,10 +1,9 @@
 | Package | Version | Downloads |
 | ------- | ------- | ------- |
 | `Mediator` | [![Nuget](https://img.shields.io/nuget/v/D.Mediator.svg)](https://nuget.org/packages/D.Mediator) | [![Nuget](https://img.shields.io/nuget/dt/D.Mediator.svg)](https://nuget.org/packages/D.Mediator) |
-| `Mediator.Abstractions` | [![Nuget](https://img.shields.io/nuget/v/D.Mediator.Abstractions.svg)](https://nuget.org/packages/D.Mediator.Abstractions) | [![Nuget](https://img.shields.io/nuget/dt/D.Mediator.Abstractions.svg)](https://nuget.org/packages/D.Mediator.Abstractions) |
 
 
-# 🧩 Simple Mediator for .NET
+# D.Mediator.
 
 Um Mediator leve e simples para aplicações .NET, inspirado no padrão [Mediator](https://refactoring.guru/design-patterns/mediator), que ajuda a desacoplar a lógica de comunicação entre objetos.
 
@@ -13,7 +12,6 @@ Um Mediator leve e simples para aplicações .NET, inspirado no padrão [Mediato
 - Envio de requisições (`SendAsync<TResponse>`)
 - Publicação de notificações para múltiplos handlers (`PublishAsync<TNotification>`)
 - Registro automático de handlers via assembly scanning
-- Compatível com .NET 9 e `Microsoft.Extensions.DependencyInjection`
 
 ---
 
@@ -86,19 +84,6 @@ public class SendWelcomeEmailHandler : INotificationHandler<UserCreatedNotificat
 
 ```csharp
 await mediator.PublishAsync(new UserCreatedNotification { Email = "user@example.com" });
-```
-
----
-
-## 📁 Estrutura
-
-```
-Mediator/
-│
-├── Abstractions/         # Interfaces: IRequest, INotification, Handlers, IMediator
-├── Extensions/           # Extension method para registrar os handlers
-├── Mediator.cs           # Implementação principal do IMediator
-└── README.md             # Este arquivo
 ```
 
 ---

@@ -4,14 +4,32 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>D.Mediator</PackageId>
+    <Version>1.0.0</Version>
+    <icon>https://raw.githubusercontent.com/dayaneLima/dotnet-mediator/refs/heads/main/src/Mediator/icon.png</icon>
+    <Licence>MIT</Licence>
+    <Authors>Dayane Lima</Authors>
+    <Company>Dayane Lima</Company>
+    <PackageDescription>Mediator Pattern Implementations</PackageDescription>
+    <Description>Mediator Pattern Implementations</Description>
+    <RepositoryUrl>https://github.com/dayaneLima/dotnet-mediator</RepositoryUrl>
+
+    <PackageProjectUrl>https://github.com/dayaneLima/dotnet-mediator</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>D.Mediator;Mediator;D.Mediator.Abstractions;Mediator.Abstractions;Design Pattern;Domain;</PackageTags>
+    <Title>D.Mediator</Title>
+    <Sumarry>Mediator Pattern Implementations</Sumarry>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="D.Mediator.Abstractions" Version="1.0.3" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mediator.Abstractions\Mediator.Abstractions.csproj" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
