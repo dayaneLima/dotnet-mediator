@@ -8,7 +8,7 @@ public static class MediatorExtension
 {
     public static IServiceCollection AddMediator(this IServiceCollection services, params Assembly[] assemblies)
     {
-        services.AddSingleton<IMediator, Mediator>();
+        services.AddTransient<IMediator, Mediator>();
 
         RegisterHandlers(services, assemblies, typeof(IRequestHandler<,>));
         RegisterHandlers(services, assemblies, typeof(INotificationHandler<>));
